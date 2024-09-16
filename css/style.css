@@ -8,6 +8,7 @@
 
 h2 {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 a {
@@ -243,7 +244,7 @@ section {
 }
 
 #academico {
-  background-color: #303030;
+  background-color: #242424;
 }
 #academico ul {
   padding-left: 16px;
@@ -282,4 +283,46 @@ section {
 }
 #certificacoes .certificado:hover img {
   scale: 1.1;
+}
+
+#lazer {
+  background-color: #242424;
+}
+#lazer .containerCustom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#lazer .containerCustom > img {
+  order: 1;
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: 0% 25%;
+}
+#lazer .containerCustom h2 {
+  margin: 0;
+}
+#lazer .containerCustom p {
+  text-indent: 36px;
+  width: 100%;
+  text-align: justify;
+}
+@media screen and (min-width: 768px) {
+  #lazer .containerCustom {
+    max-height: 425px;
+    flex-wrap: wrap;
+  }
+  #lazer .containerCustom > img {
+    order: -1;
+    max-width: fit-content;
+    height: unset;
+    min-height: 100%;
+    object-fit: contain;
+  }
+  #lazer .containerCustom p {
+    width: 50%;
+  }
 }
