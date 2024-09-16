@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Portfolio</title>
+    </head>
+    <body>
+        <header>
+            <nav class="nav">
+                <a href="#apresentacao">Apresentação</a>
+                <a href="#academico">Histórico acadêmico</a>
+                <a href="#certificacoes">Certificações</a>
+            </nav>
+        </header>
+        <main>
+            <section id="inicio">
+                <div class="containerCustom">
+                    <h2>Meu nome é</h2>
+                    <texto-animado tag="h1" velocidade="75">
+                        <custom-text>
+                            Daniel Salles Batista
+                        </custom-text>
+                    </texto-animado>
+                </div>
+            </section>
+            <section id="apresentacao">
+                <div class="containerCustom">
+                    <h2>Apresentação</h2>
+                    <img src="images/fotoDaniel.jpg" alt="Minha foto">
+                    <p>Oi, eu sou o Daniel! Sou técnico em Programação de Jogos Digitais e atualmente estou cursando Sistemas de Informação. Estou constantemente buscando por novos conhecimentos, a fim de adquirir e aprimorar minhas habilidades com tecnologia em geral.</p>
+                    <p>Dentre as ferramentos que possuo experiência, destaco GDevelop para construir jogos, e HTML, CSS, JavaScript, BootStrap e Sass para o desenvolvimento de sites.</p>
+                    <div class="containerIcons">
+                        <img src="images/icons/gdevelop.svg" alt="GDevelop">
+                        <img src="images/icons/html.svg" alt="HTML">
+                        <img src="images/icons/css.svg" alt="CSS">
+                        <img src="images/icons/javascript.svg" alt="JavaScript">
+                        <img src="images/icons/bootstrap.svg" alt="BootStrap">
+                        <img src="images/icons/sass.svg" alt="Sass">
+                    </div>
+                    <p>Atualmente, tenho alguns projetos já desenvolvidos e publicados, cujos podem ser encontrados nas minhas páginas do <a href="https://daniel-salles-batista.itch.io/">itch.io</a> e do <a href="https://github.com/daniel-s-batista">GitHub</a>. Dentre eles, alguns destaques são:</p>
+                    <ul>
+                        <li>
+                            <a href="https://daniel-salles-batista.itch.io/deathsatk">The Death's Attack (Jogo de plataforma)</a>
+                        </li>
+                        <li>
+                            <a href="https://daniel-salles-batista.itch.io/baixa-visao">TCC - Criação de um jogo digital para indivíduos com baixa visão (ETEC)</a>
+                        </li>
+                        <li>
+                            <a href="https://daniel-s-batista.github.io/player-de-musica/">Player de música (Site)</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="academico">
+                <div class="containerCustom">
+                    <h2>Histórico acadêmico</h2>
+                    <ul>
+                        <li>Ensino Médio Completo | Colégio Braga Mello (jan. 2021 - dez. 2023)</li>
+                        <li>Curso Técnico em Programação de Jogos Digitais | ETEC Professor Adolpho Arruda Mello (fev. 2022 - jun. 2023)</li>
+                        <li>Bacharelado em Sistemas de Informação | Universidade do Oeste Paulista (fev. 2024 - Presente)</li>
+                        <li>Curso de Inglês (Básico ao avançado) | Cultura Inglesa (fev. 2017 - dez. 2023)</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="certificacoes">
+                <div class="containerCustom">
+                    <h2>Certificações</h2>
+                    <lista-deslizante id="listaCertificacoes" data-lista-gap="10" data-lista-largura-card="300">
+                        <a class="certificado" href="misc/certificados/Certificado B2 First.pdf" target="_blank">
+                            <div class="thumb">
+                                <img src="images/certificados/cambridge_b2_first.webp" style="object-position: 0% 45%;" alt="">
+                            </div>
+                            <h3>B2 First - Score 175</h3>
+                            <p>Cambridge University Press & Assessment English</p>
+                        </a>
+                        <a class="certificado" href="misc/certificados/Certificado AZ-900.pdf" target="_blank">
+                            <div class="thumb">
+                                <img src="images/certificados/senai_az900.webp" style="object-position: 0% 40%;" alt="">
+                            </div>
+                            <h3>Implementação de serviços em nuvem - Microsoft AZ-900</h3>
+                            <p>Senai</p>
+                        </a>
+                        <a class="certificado" href="misc/certificados/Certificado Fundamentos de Python 1 (Senai).pdf" target="_blank">
+                            <div class="thumb">
+                                <img src="images/certificados/senai_fund_python_1.webp" style="object-position: 0% 45%;" alt="">
+                            </div>
+                            <h3>Fundamentos de Python 1</h3>
+                            <p>Senai</p>
+                        </a>
+                        <a class="certificado" href="misc/certificados/Certificado Fundamentos de Python 1 (Cisco).pdf" target="_blank">
+                            <div class="thumb">
+                                <img src="images/certificados/cisco_fund_python_1.webp" alt="">
+                            </div>
+                            <h3>Fundamentos de Python 1</h3>
+                            <p>Cisco</p>
+                        </a>
+                        <a class="certificado" href="misc/certificados/HTML e CSS Modulo 1.pdf" target="_blank">
+                            <div class="thumb">
+                                <img src="images/certificados/cev_htmlcss_1.webp" alt="">
+                            </div>
+                            <h3>HTML e CSS - Módulo 1 de 5</h3>
+                            <p>Curso em Vídeo</p>
+                        </a>
+                        <a class="certificado" href="misc/certificados/HTML e CSS Modulo 2.pdf" target="_blank">
+                            <div class="thumb">
+                                <img src="images/certificados/cev_htmlcss_2.webp" alt="">
+                            </div>
+                            <h3>HTML e CSS - Módulo 2 de 5</h3>
+                            <p>Curso em Vídeo</p>
+                        </a>
+                        <a class="certificado" href="misc/certificados/HTML e CSS Modulo 3.pdf" target="_blank">
+                            <div class="thumb">
+                                <img src="images/certificados/cev_htmlcss_3.webp" alt="">
+                            </div>
+                            <h3>HTML e CSS - Módulo 3 de 5</h3>
+                            <p>Curso em Vídeo</p>
+                        </a>
+                        <a class="certificado" href="misc/certificados/HTML e CSS Modulo 4.pdf" target="_blank">
+                            <div class="thumb">
+                                <img src="images/certificados/cev_htmlcss_4.webp" alt="">
+                            </div>
+                            <h3>HTML e CSS - Módulo 4 de 5</h3>
+                            <p>Curso em Vídeo</p>
+                        </a>
+                    </lista-deslizante>
+                    <div class="botoesLista">
+                        <lista-deslizante-voltar data-lista-alvo="#listaCertificacoes">
+                            <img src="images/btn_seta.png" alt="">
+                        </lista-deslizante-voltar>
+                        <lista-deslizante-avancar data-lista-alvo="#listaCertificacoes">
+                            <img src="images/btn_seta.png" alt="">
+                        </lista-deslizante-avancar>
+                    </div>
+                </div>
+            </section>
+            <!-- <section id="lazer">
+                <div class="containerCustom">
+                    <h2>Lazer e hobbies</h2>
+                </div>
+            </section> -->
+            <!-- Lazer e hobbies -->
+            <!-- Projetos desenvolvidos -->
+        </main>
+        <footer>
+            <!-- Links úteis -->
+        </footer>
+    </body>
+    <script src="js/components/textoAnimado.js"></script>
+    <script src="js/components/listaDeslizante.js"></script>
+</html>
