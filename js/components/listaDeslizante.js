@@ -27,7 +27,7 @@ class ListaDeslizante extends HTMLElement {
     }
 
     avancar() {
-        if (this.lastElementChild.getBoundingClientRect().right > this.lista.getBoundingClientRect().right)
+        if (parseInt(this.lastElementChild.getBoundingClientRect().right) > parseInt(this.lista.getBoundingClientRect().right))
             this.indiceAtual++;
         this.mover();
     }

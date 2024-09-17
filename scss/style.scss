@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Handjet:wght@100..900&display=swap');
 
 $transicao: 0.25s;
+$corBg: #151515;
+$corBgAlt: #303030;
 $corTexto: white;
 $corLink: #090;
 $corLinkHover: #0D0;
@@ -134,12 +136,63 @@ lista-deslizante-voltar img {
     margin: 15px 0;
 }
 
+.cardCustom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 300px;
+    height: 300px;
+    padding: 15px 10px;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #151515;
+    .thumb {
+        height: 150px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    & img {
+        width: 100%;
+        max-height: 150px;
+        object-fit: cover;
+        transition: $transicao;
+    }
+    &:hover {
+        border-color: $corLinkHover;
+        background-color: $corBgAlt;
+        & img {
+            scale: 1.1;
+        }
+    }
+}
+
+.containerContato {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 36px;
+    max-width: 200px;
+    & a {
+        border: unset;
+        padding: 6px;
+        font-size: 24px;
+        line-height: 24px;
+        &:hover {
+            font-size: 36px;
+            line-height: 36px;
+            padding: 0;
+            background-color: unset;
+        }
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: #151515;
+    background-color: $corBg;
     color: $corTexto;
 }
 
@@ -162,7 +215,21 @@ header {
     left: 0;
     width: 100vw;
     min-height: 75px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 50%, transparent);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 40%, rgba(0, 0, 0, 0.25) 75%, transparent);
+    & > .nav {
+        display: none;
+    }
+    & > #telaMenu, & #btnMenu {
+        display: flex;
+    }
+    @media screen and (min-width: 992px) {
+        & > .nav {
+            display: flex;
+        }
+        & > #telaMenu, & #btnMenu {
+            display: none;
+        }
+    }
 }
 
 .nav {
@@ -183,6 +250,69 @@ header {
     }
 }
 
+#btnMenu {
+    z-index: 2;
+    position: absolute;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    top: 20px;
+    right: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: $corLink;
+    background-color: #242424;
+    transition: $transicao;
+    & #iconMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 35px;
+        height: 20px;
+        transition: $transicao;
+        & .barraMenu {
+            width: 35px;
+            height: 4px;
+            background-color: $corLink;
+            transition: $transicao;
+        }
+    }
+    &:hover {
+        color: $corLinkHover;
+        cursor: pointer;
+        & #iconMenu .barraMenu {
+            background-color: $corLinkHover;
+        }
+    }
+}
+
+#telaMenu {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    gap: 15px;
+    width: 100vw;
+    max-width: 400px;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+    @include padding-x(15px);
+    background-color: rgba($corBgAlt, 0.75);
+    backdrop-filter: blur(10px);
+    transition: calc($transicao * 2);
+    & .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    & hr {
+        width: 100%;
+        height: 0px;
+        border: 2px solid $corLink;
+    }
+}
+
 // ##### Main #####
 
 section {
@@ -195,7 +325,7 @@ section {
     justify-content: center;
     align-items: center;
     height: 240px;
-    background-color: #303030;
+    background-color: $corBgAlt;
     clip-path: ellipse(100% 75% at 50% 24%);
     & .containerCustom {
         width: 226px;
@@ -294,43 +424,10 @@ section {
             color: #242424;
         }
         &:nth-child(even) {
-            background-color: #303030;
+            background-color: $corBgAlt;
         }
         &:nth-child(odd):not(:first-child) {
             background-color: #606060;
-        }
-    }
-}
-
-#certificacoes {
-    & .certificado {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-width: 300px;
-        height: 300px;
-        padding: 15px 10px;
-        text-align: center;
-        border: 2px solid transparent;
-        border-radius: 10px;
-        background-color: #151515;
-        .thumb {
-            height: 150px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        & img {
-            width: 100%;
-            max-height: 150px;
-            object-fit: cover;
-            transition: $transicao;
-        }
-        &:hover {
-            border-color: $corLinkHover;
-            background-color: #303030;
-            & img {
-                scale: 1.1;
-            }
         }
     }
 }
@@ -375,4 +472,16 @@ section {
             }
         }
     }
+}
+
+// ##### Footer #####
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    clip-path: ellipse(100% 75% at 50% 76%);
+    background-color: $corBgAlt;
 }

@@ -3,18 +3,43 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="css/style.css">
         <title>Portfolio</title>
     </head>
     <body>
         <header>
             <nav class="nav">
-                <a href="#apresentacao">Apresentação</a>
-                <a href="#academico">Histórico acadêmico</a>
-                <a href="#certificacoes">Certificações</a>
-                <a href="#lazer">Lazer</a>
-                <a href="#projetosDesenvolvidos">Projetos desenvolvidos</a>
+                <a href="#apresentacao"><i class="bi bi-easel3-fill"></i> Apresentação</a>
+                <a href="#academico"><i class="bi bi-backpack"></i> Histórico acadêmico</a>
+                <a href="#certificacoes"><i class="bi bi-card-heading"></i> Certificações</a>
+                <a href="#lazer"><i class="bi bi-joystick"></i> Lazer</a>
+                <a href="#projetosDesenvolvidos"><i class="bi bi-code-square"></i> Projetos desenvolvidos</a>
             </nav>
+            <div id="btnMenu">
+                <div id="iconMenu">
+                    <div class="barraMenu" value="1"></div>
+                    <div class="barraMenu" value="2"></div>
+                    <div class="barraMenu" value="3"></div>
+                </div>
+                <span>MENU</span>
+            </div>
+            <div id="telaMenu">
+                <nav class="nav">
+                    <a href="#apresentacao"><i class="bi bi-easel3-fill"></i> Apresentação</a>
+                    <a href="#academico"><i class="bi bi-backpack"></i> Histórico acadêmico</a>
+                    <a href="#certificacoes"><i class="bi bi-card-heading"></i> Certificações</a>
+                    <a href="#lazer"><i class="bi bi-joystick"></i> Lazer</a>
+                    <a href="#projetosDesenvolvidos"><i class="bi bi-code-square"></i> Projetos desenvolvidos</a>
+                </nav>
+                <hr>
+                <div class="containerContato">
+                    <a href="mailto:danielsbatista@hotmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
+                    <a href="https://github.com/daniel-s-batista" target="_blank"><i class="bi bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/daniel-salles-batista/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.instagram.com/xx.dani.s.batista/" target="_blank"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
         </header>
         <main>
             <section id="inicio">
@@ -32,7 +57,7 @@
                     <h2>Apresentação</h2>
                     <img src="images/fotoDaniel.jpg" alt="Minha foto">
                     <p>Oi, eu sou o Daniel! Sou técnico em Programação de Jogos Digitais e atualmente estou cursando Sistemas de Informação. Estou constantemente buscando por novos conhecimentos, a fim de adquirir e aprimorar minhas habilidades com tecnologia em geral.</p>
-                    <p>Dentre as ferramentos que possuo experiência, destaco GDevelop para construir jogos, e HTML, CSS, JavaScript, BootStrap e Sass para o desenvolvimento de sites.</p>
+                    <p>Dentre as ferramentos que faço uso, destaco GDevelop para a programação de jogos, e HTML, CSS, JavaScript, BootStrap e Sass para o desenvolvimento de sites.</p>
                     <div class="containerIcons">
                         <img src="images/icons/gdevelop.svg" alt="GDevelop">
                         <img src="images/icons/html.svg" alt="HTML">
@@ -93,56 +118,56 @@
                 <div class="containerCustom">
                     <h2>Certificações</h2>
                     <lista-deslizante id="listaCertificacoes" data-lista-gap="10" data-lista-largura-card="300">
-                        <a class="certificado" href="misc/certificados/Certificado B2 First.pdf" target="_blank">
+                        <a class="cardCustom" href="misc/certificados/Certificado B2 First.pdf" target="_blank">
                             <div class="thumb">
                                 <img src="images/certificados/cambridge_b2_first.webp" style="object-position: 0% 45%;" alt="">
                             </div>
                             <h3>B2 First - Score 175</h3>
                             <p>Cambridge University Press & Assessment English</p>
                         </a>
-                        <a class="certificado" href="misc/certificados/Certificado AZ-900.pdf" target="_blank">
+                        <a class="cardCustom" href="misc/certificados/Certificado AZ-900.pdf" target="_blank">
                             <div class="thumb">
                                 <img src="images/certificados/senai_az900.webp" style="object-position: 0% 40%;" alt="">
                             </div>
                             <h3>Implementação de serviços em nuvem - Microsoft AZ-900</h3>
                             <p>Senai</p>
                         </a>
-                        <a class="certificado" href="misc/certificados/Certificado Fundamentos de Python 1 (Senai).pdf" target="_blank">
+                        <a class="cardCustom" href="misc/certificados/Certificado Fundamentos de Python 1 (Senai).pdf" target="_blank">
                             <div class="thumb">
                                 <img src="images/certificados/senai_fund_python_1.webp" style="object-position: 0% 45%;" alt="">
                             </div>
                             <h3>Fundamentos de Python 1</h3>
                             <p>Senai</p>
                         </a>
-                        <a class="certificado" href="misc/certificados/Certificado Fundamentos de Python 1 (Cisco).pdf" target="_blank">
+                        <a class="cardCustom" href="misc/certificados/Certificado Fundamentos de Python 1 (Cisco).pdf" target="_blank">
                             <div class="thumb">
                                 <img src="images/certificados/cisco_fund_python_1.webp" alt="">
                             </div>
                             <h3>Fundamentos de Python 1</h3>
                             <p>Cisco</p>
                         </a>
-                        <a class="certificado" href="misc/certificados/HTML e CSS Modulo 1.pdf" target="_blank">
+                        <a class="cardCustom" href="misc/certificados/HTML e CSS Modulo 1.pdf" target="_blank">
                             <div class="thumb">
                                 <img src="images/certificados/cev_htmlcss_1.webp" alt="">
                             </div>
                             <h3>HTML e CSS - Módulo 1 de 5</h3>
                             <p>Curso em Vídeo</p>
                         </a>
-                        <a class="certificado" href="misc/certificados/HTML e CSS Modulo 2.pdf" target="_blank">
+                        <a class="cardCustom" href="misc/certificados/HTML e CSS Modulo 2.pdf" target="_blank">
                             <div class="thumb">
                                 <img src="images/certificados/cev_htmlcss_2.webp" alt="">
                             </div>
                             <h3>HTML e CSS - Módulo 2 de 5</h3>
                             <p>Curso em Vídeo</p>
                         </a>
-                        <a class="certificado" href="misc/certificados/HTML e CSS Modulo 3.pdf" target="_blank">
+                        <a class="cardCustom" href="misc/certificados/HTML e CSS Modulo 3.pdf" target="_blank">
                             <div class="thumb">
                                 <img src="images/certificados/cev_htmlcss_3.webp" alt="">
                             </div>
                             <h3>HTML e CSS - Módulo 3 de 5</h3>
                             <p>Curso em Vídeo</p>
                         </a>
-                        <a class="certificado" href="misc/certificados/HTML e CSS Modulo 4.pdf" target="_blank">
+                        <a class="cardCustom" href="misc/certificados/HTML e CSS Modulo 4.pdf" target="_blank">
                             <div class="thumb">
                                 <img src="images/certificados/cev_htmlcss_4.webp" alt="">
                             </div>
@@ -171,8 +196,42 @@
             <section id="projetosDesenvolvidos">
                 <div class="containerCustom">
                     <h2>Projetos desenvolvidos</h2>
-                    <lista-deslizante id="listaProjetos" data-lista-largura-card="0" data-lista-gap="10">
-                        <!-- Definir atributos -->
+                    <lista-deslizante id="listaProjetos" data-lista-largura-card="300" data-lista-gap="10">
+                        <a class="cardCustom" href="https://daniel-salles-batista.itch.io/deathsatk" target="_blank">
+                            <div class="thumb">
+                                <img src="images/projetos/foto_the_deaths_attack.webp" style="object-position: 100% 0%; height: 100%;" alt="">
+                            </div>
+                            <h3>The Death's Attack</h3>
+                            <p>Jogo de plataforma</p>
+                        </a>
+                        <a class="cardCustom" href="https://daniel-salles-batista.itch.io/asteroid-test" target="_blank">
+                            <div class="thumb">
+                                <img src="images/projetos/foto_asteroids.webp" style="object-position: 0% 100%;" alt="">
+                            </div>
+                            <h3>Shoot 'em up com asteroides</h3>
+                            <p>Jogo de arcade</p>
+                        </a>
+                        <a class="cardCustom" href="https://daniel-salles-batista.itch.io/baixa-visao" target="_blank">
+                            <div class="thumb">
+                                <img src="images/projetos/foto_baixa_visao.webp" style="object-position: 50% 50%;" alt="">
+                            </div>
+                            <h3>Top-down para pessoas com baixa visão</h3>
+                            <p>Jogo de aventura</p>
+                        </a>
+                        <a class="cardCustom" href="https://daniel-s-batista.github.io/player-de-musica/" target="_blank">
+                            <div class="thumb">
+                                <img src="images/projetos/foto_jukebox.webp" style="object-position: 50% 50%;" alt="">
+                            </div>
+                            <h3>Jukebox</h3>
+                            <p>Player de música</p>
+                        </a>
+                        <a class="cardCustom" href="https://daniel-s-batista.github.io/to-do-list/" target="_blank">
+                            <div class="thumb">
+                                <img src="images/projetos/foto_to_do_list.webp" style="object-position: 50% 50%;" alt="">
+                            </div>
+                            <h3>Lista de tarefas</h3>
+                            <p>Lista de tarefas com salvamento</p>
+                        </a>
                     </lista-deslizante>
                     <div class="botoesLista">
                         <lista-deslizante-voltar data-lista-alvo="#listaProjetos">
@@ -186,9 +245,15 @@
             </section>
         </main>
         <footer>
-            <!-- Links úteis -->
+            <div class="containerContato">
+                <a href="mailto:danielsbatista@hotmail.com"><i class="bi bi-envelope"></i></a>
+                <a href="https://github.com/daniel-s-batista"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/daniel-salles-batista/"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/xx.dani.s.batista/"><i class="bi bi-instagram"></i></a>
+            </div>
         </footer>
     </body>
+    <script src="js/menu.js"></script>
     <script src="js/components/textoAnimado.js"></script>
     <script src="js/components/listaDeslizante.js"></script>
 </html>

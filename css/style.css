@@ -100,6 +100,57 @@ lista-deslizante-voltar img {
   margin: 15px 0;
 }
 
+.cardCustom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 300px;
+  height: 300px;
+  padding: 15px 10px;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-color: #151515;
+}
+.cardCustom .thumb {
+  height: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.cardCustom img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  transition: 0.25s;
+}
+.cardCustom:hover {
+  border-color: #0D0;
+  background-color: #303030;
+}
+.cardCustom:hover img {
+  scale: 1.1;
+}
+
+.containerContato {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 36px;
+  max-width: 200px;
+}
+.containerContato a {
+  border: unset;
+  padding: 6px;
+  font-size: 24px;
+  line-height: 24px;
+}
+.containerContato a:hover {
+  font-size: 36px;
+  line-height: 36px;
+  padding: 0;
+  background-color: unset;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -126,7 +177,21 @@ header {
   left: 0;
   width: 100vw;
   min-height: 75px;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 50%, transparent);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 40%, rgba(0, 0, 0, 0.25) 75%, transparent);
+}
+header > .nav {
+  display: none;
+}
+header > #telaMenu, header #btnMenu {
+  display: flex;
+}
+@media screen and (min-width: 992px) {
+  header > .nav {
+    display: flex;
+  }
+  header > #telaMenu, header #btnMenu {
+    display: none;
+  }
 }
 
 .nav {
@@ -144,6 +209,70 @@ header {
 }
 .nav li::before {
   display: none;
+}
+
+#btnMenu {
+  z-index: 2;
+  position: absolute;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  top: 20px;
+  right: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #090;
+  background-color: #242424;
+  transition: 0.25s;
+}
+#btnMenu #iconMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35px;
+  height: 20px;
+  transition: 0.25s;
+}
+#btnMenu #iconMenu .barraMenu {
+  width: 35px;
+  height: 4px;
+  background-color: #090;
+  transition: 0.25s;
+}
+#btnMenu:hover {
+  color: #0D0;
+  cursor: pointer;
+}
+#btnMenu:hover #iconMenu .barraMenu {
+  background-color: #0D0;
+}
+
+#telaMenu {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  gap: 15px;
+  width: 100vw;
+  max-width: 400px;
+  height: 100vh;
+  top: 0;
+  right: -100vw;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgba(48, 48, 48, 0.75);
+  backdrop-filter: blur(10px);
+  transition: 0.5s;
+}
+#telaMenu .nav {
+  flex-direction: column;
+  align-items: center;
+}
+#telaMenu hr {
+  width: 100%;
+  height: 0px;
+  border: 2px solid #090;
 }
 
 section {
@@ -269,37 +398,6 @@ section {
   background-color: #606060;
 }
 
-#certificacoes .certificado {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 300px;
-  height: 300px;
-  padding: 15px 10px;
-  text-align: center;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  background-color: #151515;
-}
-#certificacoes .certificado .thumb {
-  height: 150px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-#certificacoes .certificado img {
-  width: 100%;
-  max-height: 150px;
-  object-fit: cover;
-  transition: 0.25s;
-}
-#certificacoes .certificado:hover {
-  border-color: #0D0;
-  background-color: #303030;
-}
-#certificacoes .certificado:hover img {
-  scale: 1.1;
-}
-
 #lazer {
   background-color: #242424;
 }
@@ -340,4 +438,14 @@ section {
   #lazer .containerCustom p {
     width: 50%;
   }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  clip-path: ellipse(100% 75% at 50% 76%);
+  background-color: #303030;
 }
