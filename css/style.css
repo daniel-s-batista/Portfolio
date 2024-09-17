@@ -246,12 +246,27 @@ section {
 #academico {
   background-color: #242424;
 }
-#academico ul {
-  padding-left: 16px;
-  padding-right: 16px;
+#academico .containerTabela {
+  overflow-x: auto;
 }
-#academico li + li {
-  margin-top: 10px;
+#academico table, #academico td, #academico th {
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-collapse: collapse;
+}
+#academico td, #academico th {
+  min-width: 300px;
+  padding: 5px;
+}
+#academico tr:first-child {
+  background-color: #BBB;
+  color: #242424;
+}
+#academico tr:nth-child(even) {
+  background-color: #303030;
+}
+#academico tr:nth-child(odd):not(:first-child) {
+  background-color: #606060;
 }
 
 #certificacoes .certificado {

@@ -276,11 +276,29 @@ section {
 
 #academico {
     background-color: #242424;
-    ul {
-        @include padding-x(16px);
+    & .containerTabela {
+        overflow-x: auto;
     }
-    li + li {
-        margin-top: 10px;
+    & table, & td, & th {
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-collapse: collapse;
+    }
+    & td, & th {
+        min-width: 300px;
+        padding: 5px;
+    }
+    & tr {
+        &:first-child {
+            background-color: #BBB;
+            color: #242424;
+        }
+        &:nth-child(even) {
+            background-color: #303030;
+        }
+        &:nth-child(odd):not(:first-child) {
+            background-color: #606060;
+        }
     }
 }
 
