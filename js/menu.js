@@ -7,6 +7,7 @@ function mudarMenu() {
     const estiloBody = document.body.style;
     estiloBody.overflow = (estiloBody.overflow === "hidden") ? "auto" : "hidden";
     telaMenu.style.right = (menuAberto) ? "-100vw" : "0";
+    btnMenu.classList.toggle("ativo");
     menuAberto = !menuAberto;
 }
 

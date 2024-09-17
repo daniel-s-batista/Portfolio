@@ -285,6 +285,21 @@ header {
             background-color: $corLinkHover;
         }
     }
+    &.ativo {
+        & #iconMenu .barraMenu {
+            &[value = "1"] {
+                rotate: 45deg;
+                transform: translate(5px, 6px);
+            }
+            &[value = "2"] {
+                opacity: 0;
+            }
+            &[value = "3"] {
+                rotate: -45deg;
+                transform: translate(5px, -6px);
+            }
+        }
+    }
 }
 
 #telaMenu {

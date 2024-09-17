@@ -247,6 +247,17 @@ header > #telaMenu, header #btnMenu {
 #btnMenu:hover #iconMenu .barraMenu {
   background-color: #0D0;
 }
+#btnMenu.ativo #iconMenu .barraMenu[value="1"] {
+  rotate: 45deg;
+  transform: translate(5px, 6px);
+}
+#btnMenu.ativo #iconMenu .barraMenu[value="2"] {
+  opacity: 0;
+}
+#btnMenu.ativo #iconMenu .barraMenu[value="3"] {
+  rotate: -45deg;
+  transform: translate(5px, -6px);
+}
 
 #telaMenu {
   flex-direction: column;
