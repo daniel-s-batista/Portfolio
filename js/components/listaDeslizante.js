@@ -27,13 +27,16 @@ class ListaDeslizante extends HTMLElement {
     }
 
     avancar() {
-        if (parseInt(this.lastElementChild.getBoundingClientRect().right) > parseInt(this.lista.getBoundingClientRect().right))
+        const verificaPosicaoCard = parseInt(this.children[this.indiceAtual].getBoundingClientRect().left) <= parseInt(this.lista.getBoundingClientRect().left) && this.indiceAtual < this.children.length - 1;
+        if (parseInt(this.lastElementChild.getBoundingClientRect().right) > parseInt(this.lista.getBoundingClientRect().right) && verificaPosicaoCard)
             this.indiceAtual++;
+        console.log(this.indiceAtual);
         this.mover();
     }
 
     voltar() {
-        if (this.indiceAtual > 0)
+        const verificaPosicaoCard = parseInt(this.children[this.indiceAtual].getBoundingClientRect().left) >= parseInt(this.lista.getBoundingClientRect().left);
+        if (this.indiceAtual > 0 && verificaPosicaoCard)
             this.indiceAtual--;
         this.mover();
     }
